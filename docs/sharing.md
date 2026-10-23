@@ -79,13 +79,12 @@ The media intentionally show selected brief files rather than every file in the 
 
 ## Distribution and follow-up
 
-1. Share the English post with the MP4 on the owner's chosen LinkedIn or X account. Use the short variant when appropriate. Pin the repository on the GitHub profile if it is one of the owner's featured projects.
-2. Use the Chinese copy and the same captioned demo for 小红书; explain the current-file problem before introducing the skill name. Reply to concrete workflow questions and link the runnable example.
-3. In developer or QA communities, use their designated showcase area and describe one relevant workflow. Follow the community's current posting rules.
-4. For skill discovery, the [skills CLI installation route](../README.md#install-and-use) was exercised with version 1.7.4 in a disposable Codex project. According to [skills.sh's FAQ](https://www.skills.sh/docs/faq), its leaderboard surfaces skills through genuine CLI installations and aggregate installation telemetry. This repository does not claim a verified listing, ranking or cross-host compatibility.
-5. Invite reports through [GitHub issues](https://github.com/DDreamer94/artifact-continuity/issues). Ask for the host and revision, a sanitized before/after example, what needed to survive and what actually happened. Follow up with one concrete improvement or useful case rather than repeatedly reposting the same announcement.
+1. Use the [GitHub repository](https://github.com/DDreamer94/artifact-continuity) as the main entry point. Its README features the share graphic, expandable demonstration, installation instructions and runnable example.
+2. Invite reports through [GitHub issues](https://github.com/DDreamer94/artifact-continuity/issues). Ask for the host and revision, a sanitized before/after example, what needed to survive and what actually happened. Follow up with one concrete improvement or useful case rather than repeatedly reposting the same announcement.
+3. For skill discovery, the [skills CLI installation route](../README.md#install-and-use) was exercised with version 1.7.4 in a disposable Codex project. According to [skills.sh's FAQ](https://www.skills.sh/docs/faq), its leaderboard surfaces skills through genuine CLI installations and aggregate installation telemetry. This repository does not claim a verified listing, ranking or cross-host compatibility.
+4. The English, short and Chinese posts above are reusable drafts for any future expansion to LinkedIn, X, 小红书 or appropriate community showcase areas. Choose one relevant example and check that community's current posting rules before publishing.
 
-Launch copy and assets are prepared. Publication to social accounts and community submissions have not been performed. The custom GitHub social-preview upload is pending browser access. Keep any actual publication links in this section rather than opening a separate campaign-status document.
+The current launch scope is **GitHub only**. External posts and community submissions are not part of this launch. The custom social preview must be configured separately from committing the PNG, using the instructions above. Keep any future publication links in this section rather than opening a separate campaign-status document.
 
 ## Attribution
 

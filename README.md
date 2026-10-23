@@ -2,6 +2,8 @@
 
 **Keep improving the work. Keep the tree manageable.**
 
+[![Keep the edits. Lose the redundant drafts. Useful notes are merged into the maintained brief while the required release baseline stays.](assets/sharing/preview.png)](docs/sharing.md)
+
 Artifact Continuity gives AI agents reusable instructions for **handling changes without accumulating redundant files**. An artifact can be a report, project brief, review, knowledge page or generated export. The skill helps the agent update the existing work, merge useful revisions, preserve human edits and required history, and remove redundant working copies after checking them.
 
 For people and teams who iterate on AI-assisted work through **retries, regenerations and versions**: researchers and writers, developers and QA practitioners, and builders of agent or knowledge workflows.
@@ -133,7 +135,7 @@ If that destination already exists, identify its owner and update mechanism firs
 
 Codex documents user skill discovery at `~/.agents/skills/`. In the CLI or IDE extension, use `/skills` or type `$` to select a skill; if a new installation does not appear, restart Codex. See the [official skill setup guidance](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills). The exercises here used Codex; other hosts' installation and invocation behavior have not been verified for this package. For another host, use its documented installer with this repository's root [SKILL.md](SKILL.md) and references.
 
-Alternatively, a **fresh project installation** through the Vercel skills CLI was verified with `skills` 1.7.4 and Node.js 22.20 or later. Run from your project:
+Alternatively, a **fresh project installation** through the Vercel skills CLI was verified with `skills` 1.7.4. This CLI requires Node.js 22.20 or later. Run from your project:
 
 ```sh
 DISABLE_TELEMETRY=1 npx --yes --ignore-scripts skills@1.7.4 add \
