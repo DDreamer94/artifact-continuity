@@ -1,0 +1,11 @@
+{
+  "observations": [
+    {
+      "run_id": "A",
+      "path": "evidence/run-a/result.txt",
+      "build": "R1.0",
+      "state": "reconnect",
+      "captured_at": "2026-10-20T10:00:00Z"
+    }
+  ]
+}

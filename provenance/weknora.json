@@ -1,0 +1,50 @@
+{
+  "repository": "https://github.com/Tencent/WeKnora",
+  "revision": "8cb53fdbc58e4c15aafdba973d65742551e4c9cd",
+  "retrieved": "2026-10-23",
+  "files": [
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/Tencent/WeKnora/8cb53fdbc58e4c15aafdba973d65742551e4c9cd/LICENSE",
+      "sha256": "25cfeca2c3eee245313b1106cf1b27244e47b682802a02cc536f8f1beb6a29a6",
+      "bytes": 158420,
+      "local_research_copy": ".local/evidence/weknora/LICENSE"
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Tencent/WeKnora/8cb53fdbc58e4c15aafdba973d65742551e4c9cd/README.md",
+      "sha256": "62401302e2dda12fe190b05f32dc3f43dd9f1322b91e9845de5d114e8a0165b8",
+      "bytes": 34369,
+      "local_research_copy": ".local/evidence/weknora/README.md"
+    },
+    {
+      "path": "internal/agent/prompts_wiki.go",
+      "url": "https://raw.githubusercontent.com/Tencent/WeKnora/8cb53fdbc58e4c15aafdba973d65742551e4c9cd/internal/agent/prompts_wiki.go",
+      "sha256": "5df4d16cbf4fadb59d14bc7277ebddb2c03803d45db0b01860dd54503eb6a3fc",
+      "bytes": 40051,
+      "local_research_copy": ".local/evidence/weknora/internal/agent/prompts_wiki.go"
+    },
+    {
+      "path": "internal/application/service/knowledgebase_profile.go",
+      "url": "https://raw.githubusercontent.com/Tencent/WeKnora/8cb53fdbc58e4c15aafdba973d65742551e4c9cd/internal/application/service/knowledgebase_profile.go",
+      "sha256": "e3fd2994549b9f323de0bc8c1cd3f11d6a50b0ebb61069b423f2031b5db9dfe3",
+      "bytes": 16963,
+      "local_research_copy": ".local/evidence/weknora/internal/application/service/knowledgebase_profile.go"
+    },
+    {
+      "path": "internal/application/service/knowledge_summary_refresh.go",
+      "url": "https://raw.githubusercontent.com/Tencent/WeKnora/8cb53fdbc58e4c15aafdba973d65742551e4c9cd/internal/application/service/knowledge_summary_refresh.go",
+      "sha256": "f1e314363196de9354604040afc2511d93a2fe2e1b257c42a8221df09fd113a6",
+      "bytes": 5070,
+      "local_research_copy": ".local/evidence/weknora/internal/application/service/knowledge_summary_refresh.go"
+    },
+    {
+      "path": "internal/application/service/wiki_lint.go",
+      "url": "https://raw.githubusercontent.com/Tencent/WeKnora/8cb53fdbc58e4c15aafdba973d65742551e4c9cd/internal/application/service/wiki_lint.go",
+      "sha256": "d320f9d8766e68239d263ccfb609ccff45b4edc8fe66e136f853a85b0623fde1",
+      "bytes": 13119,
+      "local_research_copy": ".local/evidence/weknora/internal/application/service/wiki_lint.go"
+    }
+  ],
+  "distribution": "Conceptual source review only. Upstream implementation and license research copies are retained locally, ignored by Git, and not distributed."
+}

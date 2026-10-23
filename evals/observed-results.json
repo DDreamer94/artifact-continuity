@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-23",
+  "scope": "Single synthetic filesystem maintenance exercise; one control and one skill-enabled fresh-context agent run. Not a performance benchmark.",
+  "runtime": "Current Codex runtime; exact provider build and sampling parameters not recorded.",
+  "tested_skill_files": {
+    "SKILL.md": "589de0a0e590178a116892750b11e106da3e5d92785b43e31dc09b01f22725ba",
+    "references/workspace-layout.md": "07deeaaff4551cd3c2844b4f7fea1c94eec396013095a2d59a18c4a2b3691ccb",
+    "references/knowledge-maintenance.md": "fddb51591c420acf0374ab548ccc6fb0e628212cfdab2ef6874fe3c82c3d5aad"
+  },
+  "fixture_sha256": {
+    "README.md": "bbe7411867c5335751067f790eb3ce80de431cc2a273d8980d3a10565bbcd2f3",
+    "evidence/manifest.json": "940fc9a1cc7507a11978696c970bb764cf6713b4cfb91df580f69cae745da0e9",
+    "evidence/run-a/result.txt": "84a05cc450dc4fd467fb52cdc06d48fea43c47e2d2445601bf0fbb9bafaeba32",
+    "knowledge/index.md": "330e21d5da41ade96374331011263de64af78718eefb8ffa8c38b439df9c9e50",
+    "knowledge/networking.md": "478d10ada11123a2a96a212740e6589d6a4ab084ae00d84f99088d24a2c795e2",
+    "knowledge/rendering.md": "c79b192deb3486fee96909d734d7b59176d038086dd9a01b186c27e7909e4462",
+    "reviews/handover.md": "4a4575c344fa0324b070a9cae797bf4e073f909fafa8c3ac2dcd8496244aa9bb",
+    "sources/r1-amendment.md": "0d457186933caffd45d2aeefb9a8c16a3532a228e8829c2642c59d18615d193c",
+    "sources/r1-policy.md": "8c3b3ef5f7020f14be6fbaf1edb3aa08cdd489ea4f01c3d8a03918a284ff2c70",
+    "sources/r2-proposal.md": "810a562dc74b692d7b66867bc45131800d8cf6a02eaab6401399e94ff314bf20",
+    "sources/rendering.md": "b63566f250b36fee170a69a22571fba81b9275cb60f7b0a6e52e5dbb3ddcc8c9"
+  },
+  "supplied_observation_sha256": "84a05cc450dc4fd467fb52cdc06d48fea43c47e2d2445601bf0fbb9bafaeba32",
+  "control": {
+    "report_sha256": "70da3d8b1c6dd6d3d221e859fa77c694326cddc711fbd7aab9a5cf08a03a99b6",
+    "result_sha256": {
+      "README.md": "bbe7411867c5335751067f790eb3ce80de431cc2a273d8980d3a10565bbcd2f3",
+      "evidence/manifest.json": "06ba84acd24e1651a8506c1192c45b11782e1b5ea22547e40ca10cebb02b4e89",
+      "evidence/run-a/result.txt": "84a05cc450dc4fd467fb52cdc06d48fea43c47e2d2445601bf0fbb9bafaeba32",
+      "evidence/run-b/result.txt": "84a05cc450dc4fd467fb52cdc06d48fea43c47e2d2445601bf0fbb9bafaeba32",
+      "knowledge/index.md": "98e5c7343995dc7d7ad767460a5f0714dd33e5f6d2eb0e738750b0fbf40af229",
+      "knowledge/networking.md": "31b23856bbb25618b00c0d3755e1e93dde0433984f1acf8d5ef60577c7fbc20d",
+      "knowledge/rendering.md": "c79b192deb3486fee96909d734d7b59176d038086dd9a01b186c27e7909e4462",
+      "reviews/handover.md": "b1cfb981211e5364b41c6bafb903ad9bce0650beb55a067ce9af43c33221b193",
+      "sources/r1-amendment.md": "0d457186933caffd45d2aeefb9a8c16a3532a228e8829c2642c59d18615d193c",
+      "sources/r1-policy.md": "8c3b3ef5f7020f14be6fbaf1edb3aa08cdd489ea4f01c3d8a03918a284ff2c70",
+      "sources/r2-proposal.md": "810a562dc74b692d7b66867bc45131800d8cf6a02eaab6401399e94ff314bf20",
+      "sources/rendering.md": "b63566f250b36fee170a69a22571fba81b9275cb60f7b0a6e52e5dbb3ddcc8c9"
+    },
+    "repeat": "Agent reported zero writes and unchanged hashes/mtimes.",
+    "import_provenance": "Source path, original filename, import date and digest were not recorded together in the manifest."
+  },
+  "skill_enabled": {
+    "report_sha256": "317dd6a9955492d6794652933d821852558aeae68e5b65e173a8c085a7af9168",
+    "repeat_inventory_sha256": "0b45bdb53231184c472f98f28e610b5fae475ea475ef7a84b850d0c0d255ed0d",
+    "result_sha256": {
+      "README.md": "bbe7411867c5335751067f790eb3ce80de431cc2a273d8980d3a10565bbcd2f3",
+      "evidence/manifest.json": "747b5f11864ec2b2e7f78d4226cadd16d797c62e692b79b0a6708ddf92eb9db1",
+      "evidence/run-a/result.txt": "84a05cc450dc4fd467fb52cdc06d48fea43c47e2d2445601bf0fbb9bafaeba32",
+      "evidence/run-b/result.txt": "84a05cc450dc4fd467fb52cdc06d48fea43c47e2d2445601bf0fbb9bafaeba32",
+      "knowledge/index.md": "c29507f4b88e52dde137b9b36486829dda2066a4882dc5476089a9e83c9574ce",
+      "knowledge/networking.md": "6393e8c897d300b1253531d84338c8c0be959993b3e44e2977e783a15438cc42",
+      "knowledge/rendering.md": "c79b192deb3486fee96909d734d7b59176d038086dd9a01b186c27e7909e4462",
+      "reviews/handover.md": "ace3f9983468e851a0ec2ce8c6585999ff916261d17251f0df763799eb96f5a0",
+      "sources/r1-amendment.md": "0d457186933caffd45d2aeefb9a8c16a3532a228e8829c2642c59d18615d193c",
+      "sources/r1-policy.md": "8c3b3ef5f7020f14be6fbaf1edb3aa08cdd489ea4f01c3d8a03918a284ff2c70",
+      "sources/r2-proposal.md": "810a562dc74b692d7b66867bc45131800d8cf6a02eaab6401399e94ff314bf20",
+      "sources/rendering.md": "b63566f250b36fee170a69a22571fba81b9275cb60f7b0a6e52e5dbb3ddcc8c9"
+    },
+    "changed_existing": [
+      "reviews/handover.md",
+      "knowledge/networking.md",
+      "knowledge/index.md",
+      "evidence/manifest.json"
+    ],
+    "added": [
+      "evidence/run-b/result.txt"
+    ],
+    "repeat_writes": [],
+    "repeat_inventories_equal": true,
+    "repeat_inventory_matches_final_files": true,
+    "event_identity_and_import_provenance_verified": true
+  },
+  "raw_local_evidence": ".local/evals/ (ignored, not distributed)",
+  "limits": [
+    "No automatic host discovery test",
+    "No live WeKnora integration",
+    "No real execution verification of the synthetic product",
+    "No speed or large-corpus retrieval benchmark"
+  ]
+}

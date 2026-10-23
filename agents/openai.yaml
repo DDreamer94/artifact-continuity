@@ -1,0 +1,4 @@
+interface:
+  display_name: "Artifact Continuity Check"
+  short_description: "Keep artifacts and derived knowledge in sync"
+  default_prompt: "Use $artifact-continuity to find the existing home, reconcile this work, and verify affected knowledge summaries and source freshness."
