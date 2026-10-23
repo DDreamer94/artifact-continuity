@@ -8,7 +8,7 @@ For people and teams who iterate on AI-assisted work through **retries, regenera
 
 Your next attempt should build on the current file and the right input versions. A new session or retry should not automatically produce another `final-v3` document or dated folder. You invoke the skill through an agent with access to your project files; the agent performs the work using its available tools.
 
-[See the example](#what-a-manageable-tree-looks-like) · [Install and use](#install-and-use) · [Validation](docs/validation.md)
+[See the example](#what-a-manageable-tree-looks-like) · [Install and use](#install-and-use) · [Validation](docs/validation.md) · [Feedback and contributions](#maintain-and-reuse)
 
 Created and maintained by [DDreamer94](https://github.com/DDreamer94), with AI-assisted development. Its knowledge-maintenance guidance is informed by concepts from [Tencent WeKnora](https://github.com/Tencent/WeKnora). [Credits and provenance →](docs/provenance.md)
 
@@ -156,6 +156,10 @@ docs/                                Provenance, validation and pairing proposal
 The [validation notes](docs/validation.md) distinguish the initial amendment exercise from the tree-management and failed-regeneration review. These are small synthetic filesystem scenarios, with actual artifacts and repeat-write checks. They do not establish performance, automatic discovery or reliability across every agent host.
 
 ## Maintain and reuse
+
+[Report a workflow problem or suggest an improvement](https://github.com/DDreamer94/artifact-continuity/issues). Include your agent/host, the installed skill revision, a small example of the files involved, and the expected versus actual result. Explain which edits, history or evidence needed to survive. Use a sanitized example that can be shared publicly.
+
+Contributions to the instructions, examples and evaluation scenarios are welcome. A useful change shows how the agent handles a revision more correctly or keeps the tree easier to navigate, and checks that required content is preserved.
 
 Keep portable instructions in `SKILL.md`, `references/` and `agents/`. Leave host paths and private project policies in their owning environments. When changing behavior, exercise the [evaluation scenario](evals/README.md) and inspect actual files and meaning; structural validation alone is insufficient.
 
