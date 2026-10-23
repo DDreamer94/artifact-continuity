@@ -1,15 +1,15 @@
 ---
 name: artifact-continuity
-description: "Use when importing, creating, revising, renaming, consolidating, or delivering reports, reviews, evidence, knowledge or exports; when promoting drafts; or when maintaining knowledge summaries, categories, tags and source freshness across sessions."
+description: "Use when revising or regenerating documents, reports, reviews, evidence, knowledge or exports across retries and sessions; when importing references or promoting drafts; or when duplicate revisions, stale outputs and scattered folders make the project tree hard to manage."
 ---
 
-# Artifact Continuity Check
+# Artifact Continuity
 
-Keep ongoing work in its established home. A new day, session, model, worker, correction, or grooming pass does not create a new document identity. Apply this check before the first artifact write for a task, when scope changes, and before handing over its result. Once an evidence batch has an established owner and naming rule, do not repeat discovery for every capture.
+Keep changes correct and the project tree manageable: one maintained home per artifact, reconciled outputs, and history retained for a defined purpose. A new day, session, model, worker, correction, or retry does not create a new document identity. Apply this check before the first artifact write for a task, when scope changes, and before handing over its result. Once an evidence batch has an established owner and naming rule, do not repeat discovery for every capture.
 
 This skill governs artifact identity, placement, history and the continuity of derived knowledge. The task's authoring or testing workflow still governs content, evidence quality, and execution. The user's explicit request for a separate deliverable takes precedence.
 
-For workspace organization, naming, or draft promotion, read [Workspace naming and draft promotion](references/workspace-layout.md). Follow the project's adopted layout; do not migrate another project merely because the reference offers a scheme. Resolve the project root before placement—an active conversation's working directory may be a child workspace. Follow the project's applicable instructions and accepted documentation-authority decisions when distinguishing sources, maintained knowledge, guides and historical records. This skill supplies a placement workflow, not approval to promote a draft into accepted policy.
+For project-tree organization, revision retention, draft promotion, or regeneration that could overwrite an existing output, read [Workspace lifecycle and draft promotion](references/workspace-layout.md). Follow the project's adopted layout; do not migrate another project merely because the reference offers a scheme. Resolve the project root before placement—an active conversation's working directory may be a child workspace. Follow the project's applicable instructions and accepted documentation-authority decisions when distinguishing sources, maintained knowledge, guides and historical records. This skill supplies a placement workflow, not approval to promote a draft into accepted policy.
 
 For knowledge maintenance, summaries, category indexes, tags, Wiki/graph coverage or search improvement, also read [Layered knowledge and reconciliation](references/knowledge-maintenance.md). Use the layers the collection needs within its existing owners; a routine artifact edit does not require building a knowledge system.
 
@@ -46,6 +46,7 @@ Discussion and exploratory work may remain drafts. A draft does not become canon
 | Intended work | Default action | When a new file is justified |
 |---|---|---|
 | More findings, corrections, or proposals for the same review/report | Update its editing source and regenerate its existing views | A distinct supporting asset or required export belongs in the same pack |
+| A retry or regeneration of the same deliverable | Reuse its destination; stage intermediate work temporarily when needed | A requested alternative or independently meaningful observation needs its own identity; an attempt number alone does not |
 | Additional context for the same knowledge topic and baseline | Update the canonical page; retain sources and decision history | A separate topic or materially different baseline needs its own scoped page |
 | A screenshot, trace, payload, or result from a new observation | Add an event record under the established evidence owner; update its manifest | The capture represents a different time, state, environment, build, or execution |
 | Reuse of an existing observation | Reference the existing evidence if it supports the claim | A derived annotation/redaction may need a separate labelled file |
@@ -58,19 +59,23 @@ Prefer reuse, an in-place update, or a section in the existing document before a
 
 For every proposed new maintained path, be able to state: **owner, distinct purpose, why the existing file/section cannot serve it, and whether it is a source, derived view, event record, or snapshot.** Record this briefly in the existing task log or working update when useful; do not create another preflight report to justify a routine file.
 
+Continuity bookkeeping belongs in existing metadata, version history or the task response. It does not require a new status document, sidecar, registry or archive folder for each revision.
+
 Do not introduce a second root spelling, mirror a pack into knowledge/evidence, or copy an entire document tree to hold one new result. Distinct approved baselines or executions must also not be merged merely to reduce file count.
 
 ## 3. Preserve the right kind of history
 
 **Maintained documents and knowledge.** Keep one active home per scoped subject. Incorporate corrections and explicitly retire superseded claims while retaining their sources and decision dates. Do not silently rewrite raw source documents or apply one release's rule to another. Update an existing index when the canonical relationship changes; create no parallel registry if that index already serves the purpose.
 
-**Generated views.** Multiple formats can belong to one source of truth. Record their edit/generate relationship and keep them synchronized. If a reviewer edited a generated view directly, reconcile that work before overwriting it; matching case counts or titles does not prove all edits were carried forward.
+**Generated views.** Multiple formats can belong to one source of truth. Keep their edit/generate relationship and last reconciled input revisions and generation rules identifiable through existing version history, generator state or metadata. This applies to ordinary exports as well as knowledge summaries. If a reviewer edited a generated view directly, reconcile that work before overwriting it; matching case counts or titles does not prove all edits were carried forward. A missing generation baseline is a reconciliation gap, not permission to overwrite. See the workspace reference for safe regeneration and retries.
 
 **Evidence.** A new capture legitimately creates a new file, often with a timestamp or run ID. Use the existing capture directory and manifest for its owning task. Retain case/claim ID, source or case revision, environment/build, relevant state, and capture time. Preserve originals and link derived images to them. Never overwrite distinct observations, flatten different runs, or deduplicate evidence by filename resemblance. Reusing evidence does not turn it into a new execution result.
 
 **Review progress.** Preserve stable IDs, comments, reviewer decisions, and browser-backed progress where applicable. A path, origin, or storage-key change can strand notes. Avoid changing these during routine revision; if a move is needed, reconcile/export progress and verify the migration before retiring the old location. Import-format compatibility alone is not proof that all notes were recovered. A materially revised case retains its comments but must not silently inherit approval of different content.
 
 **Snapshots.** Keep a frozen baseline only when a consumer needs it. Pin that consumer to the snapshot, with a revision or digest where appropriate, before updating the live artifact. Mark snapshots as historical and keep them out of the current review entry point. Do not snapshot the entire pack for every small edit.
+
+**Ordinary revisions.** Use existing version history when it actually contains the required prior content; do not assume a file is committed or recoverable. Working revisions and failed generation attempts do not all need permanent copies. Raw sources and evidence retain their applicable provenance and retention requirements. During authorized cleanup, distinguish those requirements from redundant working history; unresolved retention needs remain explicit rather than being guessed away.
 
 ## 4. Maintain discovery alongside the owning artifact
 
@@ -94,7 +99,7 @@ Do not conduct project-wide deletion, create a new date-based archive tree, or m
 ## 6. Check continuity before delivery
 
 - The result lives at the established path; the final answer links that current entry point.
-- Each new maintained file/folder has the distinct purpose identified above; no accidental parallel review, knowledge page, root spelling, or date-based copy was introduced.
+- Compare the affected tree before and after: justify added files and folders, check retired paths for remaining consumers, and remove task-created redundant staging after validation. No accidental parallel review, knowledge page, root spelling, or date-based copy remains. File count alone does not establish manageability.
 - The project root, naming convention, case target version and actual environment version are explicit where relevant. Drafts are labelled and have not silently displaced reviewed material. Promoted drafts were compared with their destination and reconciled there.
 - Sources, generated views, indexes, image links, and required snapshot consumers agree. Check only the affected scope.
 - When knowledge is affected, check source coverage, summary freshness, authority, graph reachability where applicable, and representative searches using the knowledge reference. Report unresolved gaps; successful link checks alone do not establish these properties.

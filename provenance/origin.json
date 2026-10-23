@@ -2,8 +2,8 @@
   "starting_package": "artifact-continuity",
   "starting_version": "2026-10-10.1",
   "extracted_on": "2026-10-23",
-  "status": "standalone extraction candidate",
-  "changes_to_skill": "Generalized one project-specific authority paragraph. Other instruction and reference content retained.",
+  "status": "published standalone source; starting-file hashes describe the original extraction",
+  "changes_to_skill": "Initial extraction generalized one project-specific authority paragraph. The purpose review clarified tree manageability, generation baselines, staged retries and revision retention; see docs/validation.md for scoped evidence.",
   "starting_files": [
     {
       "path": "SKILL.md",

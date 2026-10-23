@@ -77,5 +77,229 @@
     "No live WeKnora integration",
     "No real execution verification of the synthetic product",
     "No speed or large-corpus retrieval benchmark"
-  ]
+  ],
+  "purpose_review": {
+    "date": "2026-10-23",
+    "scope": "Change continuity, authorized consolidation, tree manageability, blocked regeneration and repeat behavior. One independent fresh-context run per scenario/condition; no statistical performance claim.",
+    "runtime": "Current Codex runtime; exact provider build and sampling parameters not recorded.",
+    "fixture_sha256": {
+      "evals/tree-lifecycle.json": "e1fcf3cb8974abab241a0855dc083b2e01b99b156e34fe158cb3cfecf88259ae"
+    },
+    "tested_instruction_snapshots": {
+      "before": {
+        "SKILL.md": "589de0a0e590178a116892750b11e106da3e5d92785b43e31dc09b01f22725ba",
+        "references/workspace-layout.md": "07deeaaff4551cd3c2844b4f7fea1c94eec396013095a2d59a18c4a2b3691ccb",
+        "references/knowledge-maintenance.md": "fddb51591c420acf0374ab548ccc6fb0e628212cfdab2ef6874fe3c82c3d5aad",
+        "agents/openai.yaml": "99e59bb8c8dfcd71961425983e6cd5a965747b06ad79f9c2b2ebc3d82b21ee37"
+      },
+      "after": {
+        "SKILL.md": "002d6baf4a8571af59aa2f4d889f943b2a2dbf9dca107ce5115d769a785908f3",
+        "references/workspace-layout.md": "36b342aca1a6832f893ff8a931c200db52b4829fa59c8fb6b905d98bd548871e",
+        "references/knowledge-maintenance.md": "fddb51591c420acf0374ab548ccc6fb0e628212cfdab2ef6874fe3c82c3d5aad",
+        "agents/openai.yaml": "a990e9320c84a45de83c7f562634685d3db6d863479c55f1ae0b59f1774c1ded"
+      },
+      "final": {
+        "SKILL.md": "002d6baf4a8571af59aa2f4d889f943b2a2dbf9dca107ce5115d769a785908f3",
+        "references/workspace-layout.md": "e3aeeb5c2c8da2296042624ea75347084229024fe0a6892a2c3b9bcbd96eff69",
+        "references/knowledge-maintenance.md": "fddb51591c420acf0374ab548ccc6fb0e628212cfdab2ef6874fe3c82c3d5aad",
+        "agents/openai.yaml": "a990e9320c84a45de83c7f562634685d3db6d863479c55f1ae0b59f1774c1ded"
+      }
+    },
+    "conditions": {
+      "before": "Published original skill; Atlas tree and blocked export.",
+      "after": "First revised candidate; Atlas tree, blocked export and Lumen amendment. Tree cleanup passed but durable generation receipt was absent.",
+      "final": "Only the successful-generation receipt guidance in the workspace reference changed after the first candidate. Atlas tree was independently rerun; other results remain bound to their recorded prior snapshot."
+    },
+    "controller_review": {
+      "instruction_review": "Core change/cleanup rules already existed. Ordinary-generation baseline persistence and ordinary-revision versus raw-source retention wording needed clarification.",
+      "observed_gap": "The first candidate preserved content and cleaned drafts but recorded no project-owned source/renderer/output revision receipt.",
+      "targeted_fix": "Require a durable generation receipt in existing metadata when version history does not identify it.",
+      "final_observation": "Receipt is in existing tools/report-target.json and binds actual source, renderer and output SHA-256 values. No new file or folder required."
+    },
+    "results": {
+      "before_tree": {
+        "evidence_sha256": "54bdcd6851db0ef866f29dd9e564b11fb35983bf0d8a0d878e7c457e7485684c",
+        "initial_file_count": 16,
+        "final_file_count": 14,
+        "added": [],
+        "removed": [
+          "reports/brief-final.md",
+          "reports/draft-v2.md"
+        ],
+        "changed": [
+          "README.md",
+          "exports/brief.html",
+          "reports/brief.md",
+          "tools/report-target.json"
+        ],
+        "repeat_hashes_and_mtimes_unchanged": true,
+        "result_sha256": {
+          ".gitignore": "b89b8c5f24ac8b34f94a35c01f1a4916e14b9217aaa23804294033f0fa0dad4d",
+          "Other/report-final.md": "faf2e9da06651cc8fbca2e79887dcd2197a4fcb83877b298dad8b3b5613c17a0",
+          "README.md": "0697733be5621199c269910fb64767f7a3474fbc3c3ba67d11e23c2b9ed413ff",
+          "evidence/manifest.json": "9336ab65cac692c313e217eecc29094ad0a4b53e9905329e70ccbe7de6fd732f",
+          "evidence/run-a.txt": "48227796113f8d108f8791b90853a8002db4314426e2498dbd27147c8c60972b",
+          "evidence/run-b.txt": "48227796113f8d108f8791b90853a8002db4314426e2498dbd27147c8c60972b",
+          "exports/brief.html": "eab843d0d5ee70954a9981ebab0627401a8a1e41ca4839aa9a5e083f7762eaa2",
+          "reports/brief.md": "36195c0690a865ccb90f04b61cf0e1e830529d490f75e9f144e831e4a289b9c4",
+          "reports/release-baseline.md": "18b0cf9468e36c7e07003c1a63d65717345aaa2aedf966bf4ac3594a5c59ca76",
+          "reviews/comparison.md": "769c97be2e031d08e412742c1342ecdac576dc671783e4e341bf742ccf00f905",
+          "sources/amendment.md": "683b5fe4dec8fbbe7969725227429a30d8618fc84936b99d5ed0d442211cb58b",
+          "sources/base.md": "d290d2a15559043cc4165164dbcad57e45c316a7f3769e30b0482343929d90a6",
+          "tools/render.py": "f2a1d00801949b8967f516ee6db3442702ab58399016a7426cc1c631de15897e",
+          "tools/report-target.json": "d9283251032c50ae5b382accd2752e397c517b5fbae9f73571cf42bf1421f74f"
+        },
+        "protected_content_and_scope_verified": true,
+        "generation_receipt_binds_source_renderer_and_output": false
+      },
+      "before_blocked-export": {
+        "evidence_sha256": "132ba15450bc2f36e4094d780864dfd8a6d145523833ea43a6b1051e483f8ff3",
+        "initial_file_count": 5,
+        "final_file_count": 5,
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "repeat_hashes_and_mtimes_unchanged": true,
+        "result_sha256": {
+          ".gitignore": "b89b8c5f24ac8b34f94a35c01f1a4916e14b9217aaa23804294033f0fa0dad4d",
+          "README.md": "e20bb7e1e560103e499c216a16ef144bc9f8d54cd69866e689a5f12f6c8de8ea",
+          "exports/brief.html": "cf8171ed841dfae28dea2e239787f0b7e9e9aaa99eaa1182d54ee817e79636a2",
+          "reports/brief.md": "f40cb99dfd7a72b74e6aaca6a88086aa7bf40f01c85740709415f971579ff95c",
+          "tools/render.py": "1c1eeca3dbd80867f4f6993788339b846f7d2f8246b881181483fa54037ba420"
+        },
+        "failed_output_did_not_replace_valid_export": true
+      },
+      "after_tree": {
+        "evidence_sha256": "771a75208be438f6806c5486d8163f763f775ba20f7f260ef0ec7d263d4bed7f",
+        "initial_file_count": 16,
+        "final_file_count": 14,
+        "added": [],
+        "removed": [
+          "reports/brief-final.md",
+          "reports/draft-v2.md"
+        ],
+        "changed": [
+          "README.md",
+          "exports/brief.html",
+          "reports/brief.md",
+          "tools/report-target.json"
+        ],
+        "repeat_hashes_and_mtimes_unchanged": true,
+        "result_sha256": {
+          ".gitignore": "b89b8c5f24ac8b34f94a35c01f1a4916e14b9217aaa23804294033f0fa0dad4d",
+          "Other/report-final.md": "faf2e9da06651cc8fbca2e79887dcd2197a4fcb83877b298dad8b3b5613c17a0",
+          "README.md": "376cf1b0195b0105969675c10f3eac72991c269c385265469c83ec2cca465c84",
+          "evidence/manifest.json": "9336ab65cac692c313e217eecc29094ad0a4b53e9905329e70ccbe7de6fd732f",
+          "evidence/run-a.txt": "48227796113f8d108f8791b90853a8002db4314426e2498dbd27147c8c60972b",
+          "evidence/run-b.txt": "48227796113f8d108f8791b90853a8002db4314426e2498dbd27147c8c60972b",
+          "exports/brief.html": "438a5b2782d5b5d659194517def460edd2908fe65526c450a853e0a9b34fba84",
+          "reports/brief.md": "64d2faa41d66b6b28f14087c730bcd2e0849ee592b86e196c2a2b80a4ca47903",
+          "reports/release-baseline.md": "18b0cf9468e36c7e07003c1a63d65717345aaa2aedf966bf4ac3594a5c59ca76",
+          "reviews/comparison.md": "769c97be2e031d08e412742c1342ecdac576dc671783e4e341bf742ccf00f905",
+          "sources/amendment.md": "683b5fe4dec8fbbe7969725227429a30d8618fc84936b99d5ed0d442211cb58b",
+          "sources/base.md": "d290d2a15559043cc4165164dbcad57e45c316a7f3769e30b0482343929d90a6",
+          "tools/render.py": "f2a1d00801949b8967f516ee6db3442702ab58399016a7426cc1c631de15897e",
+          "tools/report-target.json": "d9283251032c50ae5b382accd2752e397c517b5fbae9f73571cf42bf1421f74f"
+        },
+        "protected_content_and_scope_verified": true,
+        "generation_receipt_binds_source_renderer_and_output": false
+      },
+      "after_blocked-export": {
+        "evidence_sha256": "db0cd851a361c403a18d54ea7923df40d177f1217248d1401bc1b71e3969237a",
+        "initial_file_count": 5,
+        "final_file_count": 5,
+        "added": [],
+        "removed": [],
+        "changed": [],
+        "repeat_hashes_and_mtimes_unchanged": true,
+        "result_sha256": {
+          ".gitignore": "b89b8c5f24ac8b34f94a35c01f1a4916e14b9217aaa23804294033f0fa0dad4d",
+          "README.md": "e20bb7e1e560103e499c216a16ef144bc9f8d54cd69866e689a5f12f6c8de8ea",
+          "exports/brief.html": "cf8171ed841dfae28dea2e239787f0b7e9e9aaa99eaa1182d54ee817e79636a2",
+          "reports/brief.md": "f40cb99dfd7a72b74e6aaca6a88086aa7bf40f01c85740709415f971579ff95c",
+          "tools/render.py": "1c1eeca3dbd80867f4f6993788339b846f7d2f8246b881181483fa54037ba420"
+        },
+        "failed_output_did_not_replace_valid_export": true
+      },
+      "after_lumen": {
+        "evidence_sha256": "22dd9d423a53581e632c9234b154399a7365fc59584d39ffe6c24f125ffb8fcd",
+        "initial_file_count": 11,
+        "final_file_count": 12,
+        "added": [
+          "evidence/run-b/result.txt"
+        ],
+        "removed": [],
+        "changed": [
+          "evidence/manifest.json",
+          "knowledge/index.md",
+          "knowledge/networking.md",
+          "reviews/handover.md"
+        ],
+        "repeat_hashes_and_mtimes_unchanged": true,
+        "result_sha256": {
+          "README.md": "bbe7411867c5335751067f790eb3ce80de431cc2a273d8980d3a10565bbcd2f3",
+          "evidence/manifest.json": "70d31e3b930b1bf4e52555c9c9466f08740529b2941cbdec06e8fd4bc9016112",
+          "evidence/run-a/result.txt": "84a05cc450dc4fd467fb52cdc06d48fea43c47e2d2445601bf0fbb9bafaeba32",
+          "evidence/run-b/result.txt": "84a05cc450dc4fd467fb52cdc06d48fea43c47e2d2445601bf0fbb9bafaeba32",
+          "knowledge/index.md": "215b2319dfc59b3d2a6189a05a7a05a742ee156be7f9f42b61a98e1fa5da8e69",
+          "knowledge/networking.md": "1114116155dbabddf7ddf3dd937584cb69aab3406f47195cd78778b907f21353",
+          "knowledge/rendering.md": "c79b192deb3486fee96909d734d7b59176d038086dd9a01b186c27e7909e4462",
+          "reviews/handover.md": "36fa7895199e1dc86c043ca0d67829f3805d34375d73d137786906ba6c4b5c96",
+          "sources/r1-amendment.md": "0d457186933caffd45d2aeefb9a8c16a3532a228e8829c2642c59d18615d193c",
+          "sources/r1-policy.md": "8c3b3ef5f7020f14be6fbaf1edb3aa08cdd489ea4f01c3d8a03918a284ff2c70",
+          "sources/r2-proposal.md": "810a562dc74b692d7b66867bc45131800d8cf6a02eaab6401399e94ff314bf20",
+          "sources/rendering.md": "b63566f250b36fee170a69a22571fba81b9275cb60f7b0a6e52e5dbb3ddcc8c9"
+        },
+        "source_scope_review_and_import_provenance_verified": true,
+        "limitations": [
+          "No real execution of amended product behavior",
+          "R0 source unavailable"
+        ]
+      },
+      "final_tree": {
+        "evidence_sha256": "ece7feb71d2348ba1671491bbfabcf5634ae01162da87c22890663f239d151b4",
+        "initial_file_count": 16,
+        "final_file_count": 14,
+        "added": [],
+        "removed": [
+          "reports/brief-final.md",
+          "reports/draft-v2.md"
+        ],
+        "changed": [
+          "README.md",
+          "exports/brief.html",
+          "reports/brief.md",
+          "tools/report-target.json"
+        ],
+        "repeat_hashes_and_mtimes_unchanged": true,
+        "result_sha256": {
+          ".gitignore": "b89b8c5f24ac8b34f94a35c01f1a4916e14b9217aaa23804294033f0fa0dad4d",
+          "Other/report-final.md": "faf2e9da06651cc8fbca2e79887dcd2197a4fcb83877b298dad8b3b5613c17a0",
+          "README.md": "0697733be5621199c269910fb64767f7a3474fbc3c3ba67d11e23c2b9ed413ff",
+          "evidence/manifest.json": "9336ab65cac692c313e217eecc29094ad0a4b53e9905329e70ccbe7de6fd732f",
+          "evidence/run-a.txt": "48227796113f8d108f8791b90853a8002db4314426e2498dbd27147c8c60972b",
+          "evidence/run-b.txt": "48227796113f8d108f8791b90853a8002db4314426e2498dbd27147c8c60972b",
+          "exports/brief.html": "b0463b2d56d114f7ce7885029d4ef5b2da24781c60b3ed2e3ab02c77fca7ae45",
+          "reports/brief.md": "d246520c7e8322a322a6bef1a9aeac417172813b273301e7fc38ef5250cf4017",
+          "reports/release-baseline.md": "18b0cf9468e36c7e07003c1a63d65717345aaa2aedf966bf4ac3594a5c59ca76",
+          "reviews/comparison.md": "769c97be2e031d08e412742c1342ecdac576dc671783e4e341bf742ccf00f905",
+          "sources/amendment.md": "683b5fe4dec8fbbe7969725227429a30d8618fc84936b99d5ed0d442211cb58b",
+          "sources/base.md": "d290d2a15559043cc4165164dbcad57e45c316a7f3769e30b0482343929d90a6",
+          "tools/render.py": "f2a1d00801949b8967f516ee6db3442702ab58399016a7426cc1c631de15897e",
+          "tools/report-target.json": "69f93acd513adea50a78212c0a908a8fde700af1334ef2eb618e3d40bbb052c0"
+        },
+        "protected_content_and_scope_verified": true,
+        "generation_receipt_binds_source_renderer_and_output": true
+      }
+    },
+    "raw_local_evidence": ".local/reanalysis/ (ignored, not distributed); six byte-verified inventory/command records and the first candidate instruction snapshot.",
+    "limits": [
+      "Single samples; no general model-quality advantage established",
+      "No concurrent-writer stress test",
+      "No automatic skill-selection test",
+      "No browser-rendering test",
+      "No new Git retention workflow exercised",
+      "No live WeKnora integration or actual synthetic-product execution"
+    ]
+  }
 }

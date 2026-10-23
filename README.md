@@ -1,10 +1,12 @@
 # Artifact Continuity
 
-**Pick up the work. Keep its history.**
+**Keep improving the work. Keep the tree manageable.**
 
-Your next agent session should be able to find the maintained report, preserve review decisions, and understand which sources a summary actually reflects.
+Artifact Continuity is an agent skill for **handling changes without accumulating redundant files**. It helps agents continue in the right editing source, reconcile revisions and generated outputs, preserve useful history, and retire redundant working copies after verification.
 
-Artifact Continuity is a reusable agent skill for carrying **documents, evidence and knowledge across sessions**. It helps agents locate the existing editing source, reconcile changes in place, and check the outputs that depend on it.
+For people and teams who iterate on AI-assisted work through **retries, regenerations and versions**: researchers and writers, developers and QA practitioners, and builders of agent or knowledge workflows.
+
+Your next attempt should start from the right artifact and source baseline, carrying forward the review history and decisions that still apply. A new session or retry should not automatically produce another `final-v3` document or dated folder.
 
 Created and maintained by [DDreamer94](https://github.com/DDreamer94), with AI-assisted development. Its knowledge-maintenance guidance is informed by concepts from [Tencent WeKnora](https://github.com/Tencent/WeKnora). [Credits and provenance →](docs/provenance.md)
 
@@ -12,13 +14,12 @@ Created and maintained by [DDreamer94](https://github.com/DDreamer94), with AI-a
 
 Start with these questions:
 
-| Ask yourself | Where the skill helps |
-| --- | --- |
-| Do I return to the same reports or notes across sessions, models or agents? | Find the maintained home and continue there. |
-| Do corrections end up scattered across several copies? | Reconcile the editing source and its exports. |
-| Do reviewer comments, stable IDs or earlier decisions need to survive revisions? | Preserve review history and distinguish old approval from changed content. |
-| Do I collect screenshots, traces or results from separate runs? | Retain each observation's identity and provenance, including equal-byte captures. |
-| Do summaries or indexes become stale when sources change? | Follow dependencies and reconcile the affected knowledge. |
+- **Do I return to the same work across sessions, models or agents?** Find the maintained home and continue there.
+- **Do retries leave duplicate drafts and make the project tree hard to navigate?** Reconcile useful changes, then retire redundant copies within the authorized scope.
+- **Do regenerations leave me unsure which version to use?** Identify the editing source and generation baseline, then reconcile its outputs.
+- **Do reviewer comments, stable IDs or earlier decisions need to survive revisions?** Preserve review history and distinguish old approval from changed content.
+- **Do I collect screenshots, traces or results from separate runs?** Retain each observation's identity and provenance, including equal-byte captures.
+- **Do summaries or indexes become stale when sources change?** Follow dependencies and reconcile the affected knowledge.
 
 If you recognize one of these patterns, start with **one ongoing artifact and its existing inputs**. A report with reviewer notes, a release handover, or a small knowledge collection is enough.
 
@@ -30,12 +31,62 @@ Paste this into your agent for a short fit assessment:
 
 ```text
 Help me decide whether artifact-continuity fits my workflow.
-Ask one question at a time, up to three, about where my ongoing work lives,
-what gets lost between sessions, and who relies on the result.
+Ask one question at a time, up to three, about my current artifact and version,
+what gets lost or duplicated during retries, and who relies on the result.
 Then recommend whether to use it, the smallest useful starting scope,
 and one concrete success check. Keep this assessment conversational;
 leave files unchanged.
 ```
+
+## See it in your own work
+
+These are illustrative situations. The technical handover also has an exercised synthetic fixture; the other examples describe intended use rather than tested customer outcomes.
+
+### Research, writing and recurring reports
+
+An agent regenerates a research brief after a source correction. Continue in `research-brief.md`, retain the review comments, record the corrected source revision, and reconcile the affected overview. Retire a promoted working draft after checking its useful edits reached the maintained brief. Keep any older baseline that a comparison actually requires.
+
+**Useful result:** the next session can find the maintained brief and see which sources it reflects.
+
+### Development, QA and release handovers
+
+An approved amendment changes one rule in a release handover. Revise the existing finding, retain its ID and reviewer comment, mark changed wording for review, and keep two verification runs distinct even when their result files match.
+
+**Try it:** [Lumen's synthetic amendment example](examples/review-amendment.md) and its [validation record](docs/validation.md). The exercise checks document maintenance; it does not verify a real product's behavior.
+
+### Agent and knowledge workflows
+
+An agent regenerates a knowledge export after another source is added. Reconcile the affected topic and overview, record the input set used, and compare any returned edits with the current editing source before promotion.
+
+**Useful result:** a regenerated view has a traceable relationship to its maintained source. The optional [WeKnora pairing](docs/weknora.md) explores this boundary as a proposal.
+
+## What a manageable tree looks like
+
+An ongoing brief has collected two extra drafts:
+
+```text
+reports/
+  brief.md
+  draft-v2.md
+  brief-final.md
+  release-baseline.md
+exports/
+  brief.html
+```
+
+After an authorized consolidation:
+
+```text
+reports/
+  brief.md               # Current source, with useful edits reconciled
+  release-baseline.md    # Frozen text still needed by a comparison
+exports/
+  brief.html             # Existing view regenerated from the current source
+```
+
+The draft copies are retired only after their unique notes are preserved, stale claims are resolved and consumers are updated. Original evidence, required source revisions and the comparison baseline remain. Ordinary editing history can use the project's existing version history when the required content is recorded there.
+
+This is the [Atlas evaluation fixture](evals/tree-lifecycle.json): its complete project went from 16 files to 14 in both the original and final skill runs, with no writes on repeat. The final run also recorded generation revisions in existing configuration. The point is a clear current home and justified retained history; a lower file count alone does not prove a healthy tree. See the [validation record](docs/validation.md).
 
 ## What changes in practice?
 
@@ -43,6 +94,8 @@ leave files unchanged.
 | --- | --- |
 | Another session adds findings to the same review | Update its established editing source and existing views. |
 | A draft is ready to become maintained work | Compare the baseline, current destination and draft; reconcile human edits. |
+| Several drafts represent the same ongoing deliverable | Merge useful changes, repair consumers and retire verified redundant copies within scope. |
+| Regeneration fails halfway through | Preserve the last valid output, report it as stale, and clean disposable partial output. |
 | A new evidence capture matches an old file's bytes | Keep both when they represent different observation events. |
 | An approved amendment adds a source | Refresh the affected topic and overview, preserving scope and unresolved gaps. |
 | The same maintenance request runs again with unchanged inputs | Reuse the result and make no unnecessary writes. |
@@ -66,10 +119,10 @@ If that destination already contains a skill, review its editing source and upda
 Invoke the skill explicitly in a supporting agent:
 
 ```text
-Use $artifact-continuity to update the existing release handover
-with this approved amendment. Preserve the review history, add the
-new verification observation, and reconcile affected knowledge notes.
-Link the maintained entrypoints when done.
+Use $artifact-continuity to apply these approved changes to the existing
+project brief and its exports. Preserve human notes and required history.
+Reconcile and retire redundant drafts within this brief after verification.
+Report the current entrypoints and any unresolved gaps.
 ```
 
 Installation makes the instructions available. Automatic discovery and tool access depend on the host; check those in your own runtime.
@@ -88,7 +141,7 @@ The [proposed pairing guide](docs/weknora.md) describes keeping project files as
 
 ```text
 SKILL.md                              Agent entrypoint and continuity workflow
-references/workspace-layout.md        Naming, ownership and draft promotion
+references/workspace-layout.md        Ownership, retries, retention and promotion
 references/knowledge-maintenance.md   Layers, freshness and reconciliation
 agents/openai.yaml                    Optional Codex UI metadata
 examples/                            Worked scenario
@@ -96,7 +149,7 @@ evals/                               Synthetic fixture and inspection criteria
 docs/                                Provenance, validation and pairing proposal
 ```
 
-The initial validation used fresh agent runs on a small filesystem collection. The skill-enabled run preserved review history, distinct evidence events and import provenance, then repeated with no writes. See [validation notes](docs/validation.md) for the control result and limits. This is not a speed or large-corpus retrieval benchmark.
+The [validation notes](docs/validation.md) distinguish the initial amendment exercise from the tree-management and failed-regeneration review. These are small synthetic filesystem scenarios, with actual artifacts and repeat-write checks. They do not establish performance, automatic discovery or reliability across every agent host.
 
 ## Maintain and reuse
 

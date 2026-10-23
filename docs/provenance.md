@@ -25,7 +25,9 @@ The pinned WeKnora [LICENSE](https://github.com/Tencent/WeKnora/blob/8cb53fdbc58
 
 ## Extraction record
 
-The starting personal package was version `2026-10-10.1`. The standalone package preserves its workflow and two references, generalizes one project-specific authority paragraph, and adds repository documentation, examples and evaluation materials. It does not import the previous private repository's history or unrelated packages.
+The starting personal package was version `2026-10-10.1`. The initial standalone extraction preserved its workflow and two references, generalized one project-specific authority paragraph, and added repository documentation, examples and evaluation materials. It did not import the previous private repository's history or unrelated packages.
+
+The subsequent purpose review makes project-tree manageability explicit and clarifies ordinary export baselines, safe regeneration, revision retention and temporary-output cleanup. Its scoped behavioral evidence is recorded in the existing [validation record](validation.md); the original extraction hashes remain historical records.
 
 [Origin hashes](../provenance/origin.json) record the four starting package files. [Upstream receipts](../provenance/weknora.json) record the reviewed public sources, retrieval date and byte digests. Exact research copies are retained locally under the ignored `.local/evidence/weknora/` directory; they are not part of the Git distribution. Public links and digests identify those inputs for later review without bundling the upstream implementation.
 
