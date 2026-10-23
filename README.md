@@ -2,24 +2,56 @@
 
 **Keep improving the work. Keep the tree manageable.**
 
-Artifact Continuity is an agent skill for **handling changes without accumulating redundant files**. It helps agents continue in the right editing source, reconcile revisions and generated outputs, preserve useful history, and retire redundant working copies after verification.
+Artifact Continuity gives AI agents reusable instructions for **handling changes without accumulating redundant files**. An artifact can be a report, project brief, review, knowledge page or generated export. The skill helps the agent update the existing work, merge useful revisions, preserve human edits and required history, and remove redundant working copies after checking them.
 
 For people and teams who iterate on AI-assisted work through **retries, regenerations and versions**: researchers and writers, developers and QA practitioners, and builders of agent or knowledge workflows.
 
-Your next attempt should start from the right artifact and source baseline, carrying forward the review history and decisions that still apply. A new session or retry should not automatically produce another `final-v3` document or dated folder.
+Your next attempt should build on the current file and the right input versions. A new session or retry should not automatically produce another `final-v3` document or dated folder. You invoke the skill through an agent with access to your project files; the agent performs the work using its available tools.
+
+[See the example](#what-a-manageable-tree-looks-like) · [Install and use](#install-and-use) · [Validation](docs/validation.md)
 
 Created and maintained by [DDreamer94](https://github.com/DDreamer94), with AI-assisted development. Its knowledge-maintenance guidance is informed by concepts from [Tencent WeKnora](https://github.com/Tencent/WeKnora). [Credits and provenance →](docs/provenance.md)
+
+## What a manageable tree looks like
+
+An ongoing brief has collected two extra drafts:
+
+```text
+reports/
+  brief.md
+  draft-v2.md
+  brief-final.md
+  release-baseline.md
+exports/
+  brief.html
+```
+
+After an authorized consolidation:
+
+```text
+reports/
+  brief.md               # Current source, with useful edits reconciled
+  release-baseline.md    # Frozen text still needed by a comparison
+exports/
+  brief.html             # Existing view regenerated from the current source
+```
+
+Before removing the two draft copies, the agent merges their useful notes into `brief.md`, resolves conflicting claims and updates links or tools that used the drafts. The HTML is regenerated from that maintained brief. The older baseline stays because a comparison still needs it; original evidence and required source revisions also remain.
+
+Details about which inputs and generator produced the export belong in existing metadata or configuration. Keeping track of revisions should not create another status document or archive folder for every attempt.
+
+This is the [Atlas evaluation fixture](evals/tree-lifecycle.json): its complete project went from 16 files to 14 in both the original and final skill runs, with no writes on repeat. The final run also recorded generation revisions in existing configuration. The point is a clear current home and justified retained history; a lower file count alone does not prove a healthy tree. See the [validation record](docs/validation.md).
 
 ## Does this fit your workflow?
 
 Start with these questions:
 
-- **Do I return to the same work across sessions, models or agents?** Find the maintained home and continue there.
+- **Do I return to the same work across sessions, models or agents?** Find the current source file and continue there.
 - **Do retries leave duplicate drafts and make the project tree hard to navigate?** Reconcile useful changes, then retire redundant copies within the authorized scope.
-- **Do regenerations leave me unsure which version to use?** Identify the editing source and generation baseline, then reconcile its outputs.
+- **Do regenerations leave me unsure which version to use?** Identify the current source and the input versions used to produce its exports.
 - **Do reviewer comments, stable IDs or earlier decisions need to survive revisions?** Preserve review history and distinguish old approval from changed content.
-- **Do I collect screenshots, traces or results from separate runs?** Retain each observation's identity and provenance, including equal-byte captures.
-- **Do summaries or indexes become stale when sources change?** Follow dependencies and reconcile the affected knowledge.
+- **Do I collect screenshots, traces or results from separate runs?** Keep the runs distinguishable, even when their output files contain identical bytes.
+- **Do summaries or indexes become stale when sources change?** Update the affected pages and keep them linked to their sources.
 
 If you recognize one of these patterns, start with **one ongoing artifact and its existing inputs**. A report with reviewer notes, a release handover, or a small knowledge collection is enough.
 
@@ -60,34 +92,6 @@ An agent regenerates a knowledge export after another source is added. Reconcile
 
 **Useful result:** a regenerated view has a traceable relationship to its maintained source. The optional [WeKnora pairing](docs/weknora.md) explores this boundary as a proposal.
 
-## What a manageable tree looks like
-
-An ongoing brief has collected two extra drafts:
-
-```text
-reports/
-  brief.md
-  draft-v2.md
-  brief-final.md
-  release-baseline.md
-exports/
-  brief.html
-```
-
-After an authorized consolidation:
-
-```text
-reports/
-  brief.md               # Current source, with useful edits reconciled
-  release-baseline.md    # Frozen text still needed by a comparison
-exports/
-  brief.html             # Existing view regenerated from the current source
-```
-
-The draft copies are retired only after their unique notes are preserved, stale claims are resolved and consumers are updated. Original evidence, required source revisions and the comparison baseline remain. Ordinary editing history can use the project's existing version history when the required content is recorded there.
-
-This is the [Atlas evaluation fixture](evals/tree-lifecycle.json): its complete project went from 16 files to 14 in both the original and final skill runs, with no writes on repeat. The final run also recorded generation revisions in existing configuration. The point is a clear current home and justified retained history; a lower file count alone does not prove a healthy tree. See the [validation record](docs/validation.md).
-
 ## What changes in practice?
 
 | Situation | Expected action |
@@ -100,7 +104,7 @@ This is the [Atlas evaluation fixture](evals/tree-lifecycle.json): its complete 
 | An approved amendment adds a source | Refresh the affected topic and overview, preserving scope and unresolved gaps. |
 | The same maintenance request runs again with unchanged inputs | Reuse the result and make no unnecessary writes. |
 
-The skill supplies a decision process to an agent. The agent still needs access to the relevant files and tools, and follows the task's authorization and project rules. This package contains instructions and references; it runs no background service.
+The agent follows your project rules and the scope you authorize. Routine revision does not authorize a project-wide cleanup. This package contains instructions and references; it runs no background service or automatic cleanup job.
 
 ## Install and use
 
