@@ -14,12 +14,14 @@ Use descriptive maintained names that explain content and scope. A date belongs 
 
 1. Stage a persistent draft under the existing draft owner when a file is useful. Record its intended destination, starting baseline and unresolved questions in the draft or existing task log. Scratch calculations can stay in a temporary area.
 2. Compare the starting baseline, current canonical destination and draft. Inspect unique additions, overlaps, contradictions, reviewer edits, evidence and dependent links.
-3. Choose addition, modification, replacement or discard. Apply changes to the established editing source, regenerate its views, and keep only justified historical inputs. A draft for review is not an approved case, execution result or accepted policy.
+3. Choose addition, modification, replacement or discard. Apply changes to the established editing source, regenerate affected views, and keep only justified historical inputs. A draft for review is not an approved case, execution result or accepted policy.
 4. Verify the destination, identifiers, evidence links and consumers. Retire only the redundant draft after required unique content has been reconciled. The user's authorization for the task controls whether to apply the change; this workflow does not add a routine approval gate.
 
 ## Regenerate without accumulating attempts
 
 Identify the source, generation rules and last generated output using existing history or generator metadata. Compare that baseline with the current source and current output so manual edits can be reconciled into the editing source. If the baseline is unavailable, inspect the differences and preserve unresolved edits; do not treat the output as disposable merely because it is generated.
+
+If the relevant input set and revisions, generation rules, scope and current output still match the recorded baseline, reuse the valid result without rerunning the generator or rewriting files, receipts or dates. Check the output as well as its inputs; timestamps alone do not establish equality. An unchanged dependency gap remains unresolved, and an unchanged stale or unverified output does not become valid.
 
 After successful regeneration, make that baseline available to the next session. If existing version history does not already identify it, update the existing generator configuration, artifact metadata or owning index with the source revision/digest, relevant generator/rules revision or digest, and resulting output digest. Record only inputs actually used. Source and output paths alone do not identify their revisions. A check recorded only in the current conversation does not give future sessions a project baseline; do not create a separate sidecar when an existing owner can hold it.
 

@@ -2,6 +2,8 @@
 
 These exercises cover amendment handling, project-tree consolidation and blocked regeneration. Keep run outputs and evaluator inventories in temporary workspaces, outside this repository and outside the project being evaluated. A new test run does not need another maintained report folder here.
 
+For a first use rather than a comparative evaluation, follow the [runnable Lumen walkthrough](../examples/review-amendment.md#try-it-in-a-temporary-project), which includes sample setup, explicit invocation and a repeat-state check. The neutral tasks below remain suitable for control and skill-enabled conditions.
+
 ## Lumen: amendment and knowledge continuity
 
 The `input/` directory is a synthetic project. `inbox/run-b.txt` is a separate supplied input. Neither represents a real product or execution result.

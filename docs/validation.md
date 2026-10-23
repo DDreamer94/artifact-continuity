@@ -2,7 +2,7 @@
 
 Date: 23 October 2026.
 
-This record separates the initial standalone extraction from the subsequent review of change handling and project-tree manageability. Results apply to the instruction hashes recorded for each exercise, not automatically to later revisions.
+This record separates the initial standalone extraction, the review of change handling and project-tree manageability, and the subsequent onboarding and efficiency clarification. Results apply to the instruction hashes recorded for each exercise, not automatically to later revisions.
 
 ## Initial extraction: amendment exercise
 
@@ -54,6 +54,20 @@ Controller inspection found a remaining failure in the first candidate: Atlas's 
 A final independent Atlas run passed all three phases with that clarification. The existing generator configuration now holds verified source, renderer and output SHA-256 values; they match the final files after consolidation. The run still retired exactly two drafts, added no maintained files or directories, preserved the protected content and performed no writes on repeat. The controller compared the retained inventories against the actual final files, rather than accepting the agent's completion report alone.
 
 The final clarification changed only the workspace reference's successful-generation receipt guidance. Atlas was rerun against that exact final snapshot. Blocked-export and Lumen results remain bound to the first revised snapshot; their relevant preservation rules and the knowledge reference were unchanged. All scenarios are single samples in the current Codex runtime, with exact provider build and sampling parameters unrecorded. No concurrent-writer or automatic-discovery test was performed.
+
+## Onboarding and efficiency clarification
+
+Review found that the existing instructions already support focused reads, affected-scope checks and unchanged-result reuse. Three narrow edits make that behavior more consistent: reuse discovery confirmed within the task, regenerate only affected views with an explicit unchanged-output check, and choose retrieval checks for the routes that changed. Input sets, generation rules and the current output remain part of the reuse decision; stale results and missing baselines cannot be accepted merely because nothing changed.
+
+The earlier successful baseline is retained as preservation evidence. Three fresh-context agents exercised the revised instruction snapshot on the existing fixtures, and the controller inspected actual files and compared inventories:
+
+- Atlas retained the source, human notes, approval boundary, protected evidence and comparison inputs; consolidation removed only the two drafts, leaving 14 files. Generation hashes matched the source, renderer and HTML. The repeat preserved paths, hashes, sizes, nanosecond mtimes and directory names, and did not rerun the generator.
+- Lumen revised four existing files and added only observation B, taking the project from 11 files to 12. Source scope, reviewer comments, import provenance and unresolved gaps survived. The repeat preserved paths, hashes, sizes, nanosecond mtimes and directory names.
+- The blocked export retained all five original files and correctly remained stale. The initial scratch attempt failed on the missing logo and its partial output was removed. The repeat checked the unchanged dependency and skipped another generator run. Controller inventories taken before and after the exercise matched exactly. The agent's intermediate timestamp records lost integer precision through JavaScript serialization; those records establish hashes and sizes, but are not an independent exact-nanosecond oracle.
+
+The [first-use walkthrough](../examples/review-amendment.md#try-it-in-a-temporary-project) reuses Lumen. Its setup command copied all 11 project files and the sibling input byte-for-byte. Its comparison command accepted an unchanged state and rejected separate changes to content, modification time, added files and added directories. These checks exercise the documented commands; they do not verify automatic host discovery. The revised guide also distinguishes managed installations from full repository checkouts.
+
+Instruction hashes, output hashes and evidence digests are appended to the existing [observations](../evals/observed-results.json). Raw inventories and command records remain in the ignored `.local/reanalysis/` owner. These single samples demonstrate preserved behavior and avoided repeat writes; no comparative latency, token-cost or large-project performance benchmark was run.
 
 ## Limits
 

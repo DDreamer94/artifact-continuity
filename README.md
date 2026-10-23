@@ -108,9 +108,11 @@ The agent follows your project rules and the scope you authorize. Routine revisi
 
 ## Install and use
 
-Use your agent's documented skill installer with this repository's root directory, which contains [SKILL.md](SKILL.md).
+### 1. Install once
 
-For an agent configured to discover skills in `~/.agents/skills/`, clone it into that directory:
+You need a file-capable agent with access to the project you want to maintain. This skill adds instructions; it requires no separate server, database or API key. Your agent still uses its own account and tools.
+
+For **local Codex**, Git can place the full repository in the user skill directory:
 
 ```sh
 mkdir -p "$HOME/.agents/skills"
@@ -118,20 +120,68 @@ git clone https://github.com/DDreamer94/artifact-continuity.git \
   "$HOME/.agents/skills/artifact-continuity"
 ```
 
-If that destination already contains a skill, review its editing source and update mechanism first. The clone command will refuse a nonempty destination. For repeatable installations, select a reviewed commit or release.
+If that destination already exists, identify its owner and update mechanism first. The clone command refuses a nonempty destination. A managed installation may expose a wrapper pointing to another source; keep using its installer instead of replacing it with a clone.
 
-Invoke the skill explicitly in a supporting agent:
+Codex documents user skill discovery at `~/.agents/skills/`. In the CLI or IDE extension, use `/skills` or type `$` to select a skill; if a new installation does not appear, restart Codex. See the [official skill setup guidance](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills). The exercises here used Codex; other hosts' installation and invocation behavior have not been verified for this package. For another host, use its documented installer with this repository's root [SKILL.md](SKILL.md) and references.
+
+### 2. Confirm activation
+
+Open your intended project in the agent. In Codex, send this read-only check:
 
 ```text
-Use $artifact-continuity to apply these approved changes to the existing
-project brief and its exports. Preserve human notes and required history.
-Reconcile and retire redundant drafts within this brief after verification.
-Report the current entrypoints and any unresolved gaps.
+Use $artifact-continuity. Read the installed SKILL.md and report its resolved
+path and the two goals it governs. If it is a wrapper, follow its original
+source. Leave project files unchanged.
 ```
 
-Installation makes the instructions available. Automatic discovery and tool access depend on the host; check those in your own runtime.
+Check the actual file-read/tool activity and resolved path. The two goals are preserving changes correctly and keeping the project tree manageable. This confirms the instructions were loaded; the walkthrough below checks how they are applied.
 
-Read the [worked example](examples/review-amendment.md), or try the [contained evaluation fixture](evals/README.md) before applying it to important work.
+### 3. Try a contained example
+
+Follow the [runnable Lumen walkthrough](examples/review-amendment.md#try-it-in-a-temporary-project): copy the supplied sample into a temporary project, apply an approved amendment, inspect the preserved notes and evidence, then repeat the request and compare hashes and modification times. It uses Python 3's standard library and the existing fixtures. The fixture itself needs no external service.
+
+The walkthrough needs a full repository checkout containing `evals/`. If your installer supplied only the core skill files, download a separate reference checkout to an ordinary working directory. Keep it outside the host's skill discovery directories so it does not become a second installation.
+
+### 4. Apply it to ongoing work
+
+Start with one named artifact and its dependent outputs. Replace the example paths and supply the actual approved changes:
+
+```text
+Use $artifact-continuity to apply these approved changes to reports/brief.md
+and its affected exports. Preserve human notes and required history.
+Check the current inputs and outputs; reuse valid unchanged results.
+Report the current entrypoints, changes made and unresolved gaps.
+```
+
+When you also want consolidation, specify the draft folder and authorize retiring redundant copies after reconciliation. An ordinary edit remains scoped to that edit and its dependents.
+
+For projects that should apply continuity consistently, merge this short rule into their existing agent instructions, such as `AGENTS.md` in Codex:
+
+```text
+For maintained artifact creation, revision, import or regeneration, use the
+installed artifact-continuity skill. Reuse the established editing source;
+preserve human changes and required history. Check affected dependencies,
+reuse valid unchanged outputs, and consolidate only within authorized scope.
+If the skill is unavailable, report that gap.
+```
+
+Keep the shared skill at its installed location. The project rule supplies a trigger; it does not install the skill, grant file access or provide automatic enforcement.
+
+### Keep routine work small
+
+The agent should reuse an owner and dependency map already confirmed in the task, read relevant sources, update affected outputs and stop when the scoped checks pass. An unchanged valid result should cause no generation or file writes. A changed output, missing baseline or unresolved source gap still needs inspection. There is no measured speed or token-saving claim; the [validation record](docs/validation.md) reports observed preservation and repeat-write behavior.
+
+### Troubleshooting and updates
+
+| Symptom | Next check |
+| --- | --- |
+| The skill is missing | Check the host's discovery path and that it contains `artifact-continuity/SKILL.md`; reload the host and repeat the activation check. |
+| Multiple versions appear | Resolve each path and its installation owner. Use one intended version for the task and reconcile duplicate installations through their owners. |
+| The agent says it is using the skill but creates another revision copy | Inspect its file-read activity, artifact ownership decision and the [worked example](examples/review-amendment.md). Check whether the new file has a distinct purpose. |
+| Files cannot be read or written | Grant the host the intended project access. Installing a skill does not change its permissions. |
+| A generated result is stale or blocked | Keep the last valid output, identify the changed input or missing dependency, and resume when it is resolved. |
+
+For a Git clone, inspect `git status` and the remote before updating. Fetch upstream, review the change from the installed commit, and fast-forward a clean tracking branch or select a reviewed commit. Preserve local edits. For a managed installation, use its update mechanism. Then repeat activation and the relevant example; an agent that already read older instructions should reload them. Record the installed revision through existing Git history or the manager's receipt.
 
 ## How it can pair with WeKnora
 

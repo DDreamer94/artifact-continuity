@@ -104,9 +104,11 @@ Check structural properties separately from meaning:
   conflicting baselines remain visible, and human edits have been reconciled.
 - **Identity:** related topics and shared aliases have not been merged incorrectly;
   duplicate candidates have been inspected; separate evidence events retain identity.
-- **Retrieval:** try a broad topic question, an exact identifier, and a cross-category
-  tag or alias relevant to the change. Inspect whether the result leads to the right
-  source and baseline. Add a stale/conflicting-source case when that behavior changed.
+- **Retrieval:** match checks to the affected routes: broad questions for changed
+  summaries/categories, exact identifiers for changed details, and tags or aliases
+  when those routes change. Verify affected navigation after a path repair. Inspect
+  whether results lead to the right source and baseline; broaden checks when
+  dependencies are uncertain. Add a stale/conflicting-source case when that behavior changed.
 
 Record unresolved issues in the existing task log or issue list with the affected
 artifact, source/baseline, impact and next action. Use its existing status convention

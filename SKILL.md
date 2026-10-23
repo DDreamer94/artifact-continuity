@@ -7,6 +7,8 @@ description: "Use when revising or regenerating documents, reports, reviews, evi
 
 Keep changes correct and the project tree manageable: one maintained home per artifact, reconciled outputs, and history retained for a defined purpose. A new day, session, model, worker, correction, or retry does not create a new document identity. Apply this check before the first artifact write for a task, when scope changes, and before handing over its result. Once an evidence batch has an established owner and naming rule, do not repeat discovery for every capture.
 
+Within a task, reuse the confirmed project root, artifact owner and dependency map. Recheck affected inputs and destinations before writing. Broaden discovery when scope, ownership or dependencies change, or existing records are incomplete; a checkpoint alone does not require another workspace-wide search. Load only the references relevant to the operation.
+
 This skill governs artifact identity, placement, history and the continuity of derived knowledge. The task's authoring or testing workflow still governs content, evidence quality, and execution. The user's explicit request for a separate deliverable takes precedence.
 
 For project-tree organization, revision retention, draft promotion, or regeneration that could overwrite an existing output, read [Workspace lifecycle and draft promotion](references/workspace-layout.md). Follow the project's adopted layout; do not migrate another project merely because the reference offers a scheme. Resolve the project root before placement—an active conversation's working directory may be a child workspace. Follow the project's applicable instructions and accepted documentation-authority decisions when distinguishing sources, maintained knowledge, guides and historical records. This skill supplies a placement workflow, not approval to promote a draft into accepted policy.
@@ -45,7 +47,7 @@ Discussion and exploratory work may remain drafts. A draft does not become canon
 
 | Intended work | Default action | When a new file is justified |
 |---|---|---|
-| More findings, corrections, or proposals for the same review/report | Update its editing source and regenerate its existing views | A distinct supporting asset or required export belongs in the same pack |
+| More findings, corrections, or proposals for the same review/report | Update its editing source and regenerate affected existing views | A distinct supporting asset or required export belongs in the same pack |
 | A retry or regeneration of the same deliverable | Reuse its destination; stage intermediate work temporarily when needed | A requested alternative or independently meaningful observation needs its own identity; an attempt number alone does not |
 | Additional context for the same knowledge topic and baseline | Update the canonical page; retain sources and decision history | A separate topic or materially different baseline needs its own scoped page |
 | A screenshot, trace, payload, or result from a new observation | Add an event record under the established evidence owner; update its manifest | The capture represents a different time, state, environment, build, or execution |
