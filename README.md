@@ -4,7 +4,7 @@
 
 [![Keep the edits. Lose the redundant drafts. Useful notes are merged into the maintained brief while the required release baseline stays.](assets/sharing/preview.png)](docs/sharing.md)
 
-Artifact Continuity gives AI agents reusable instructions for **handling changes without accumulating redundant files**. An artifact can be a report, project brief, review, knowledge page or generated export. The skill helps the agent update the existing work, merge useful revisions, preserve human edits and required history, and remove redundant working copies after checking them.
+Artifact Continuity gives AI agents reusable instructions for **keeping revisions reviewable without accumulating redundant files**. An artifact can be a report, project brief, review, knowledge page or generated export. The skill helps the agent update the existing work, merge useful revisions, preserve human edits and required history, and remove redundant working copies after checking them.
 
 For people and teams who iterate on AI-assisted work through **retries, regenerations and versions**: researchers and writers, developers and QA practitioners, and builders of agent or knowledge workflows.
 
@@ -13,6 +13,14 @@ Your next attempt should build on the current file and the right input versions.
 [See the example](#what-a-manageable-tree-looks-like) · [Install and use](#install-and-use) · [40-second demo and sharing kit](docs/sharing.md) · [Validation](docs/validation.md) · [Feedback and contributions](#maintain-and-reuse)
 
 Created and maintained by [DDreamer94](https://github.com/DDreamer94), with AI-assisted development. Its knowledge-maintenance guidance is informed by concepts from [Tencent WeKnora](https://github.com/Tencent/WeKnora). [Credits and provenance →](docs/provenance.md)
+
+## Faster generation makes review more important
+
+**More drafts create more work to review.** When retries leave competing copies, reviewers must also establish which version is current, what changed and where their feedback went. Checking claims, verifying evidence and deciding what to accept still requires attention.
+
+Artifact Continuity guides agents to revise the established document, preserve human edits and approval boundaries, and reconcile redundant working copies. This keeps the current work and the changes awaiting review easier to identify. The project's review and validation process still determines whether the content is correct.
+
+Aim for the **smallest useful set of documents**: one maintained home per distinct deliverable, its needed outputs, and justified history and evidence. Separate observations, required baselines and independently useful documents keep their own identities. A retry alone does not justify another document to compare and maintain.
 
 ## What a manageable tree looks like
 
@@ -57,6 +65,7 @@ A condensed presentation of a fresh synthetic run, not real-time footage. [Downl
 
 Start with these questions:
 
+- **Do I spend more time sorting competing drafts than reviewing their changes?** Keep the current artifact clear, reconcile useful edits there, and make clear what still needs review.
 - **Do I return to the same work across sessions, models or agents?** Find the current source file and continue there.
 - **Do retries leave duplicate drafts and make the project tree hard to navigate?** Reconcile useful changes, then retire redundant copies within the authorized scope.
 - **Do regenerations leave me unsure which version to use?** Identify the current source and the input versions used to produce its exports.

@@ -4,6 +4,8 @@
 
 Artifact Continuity gives file-capable AI agents instructions to revise existing work, preserve human edits and required history, and reconcile redundant drafts within the scope you authorize.
 
+**Faster generation makes review more important.** Each extra draft adds material to check; competing copies also make reviewers establish which version is current and where their feedback went. Keep the smallest useful document set, with clear current artifacts and the history and evidence their consumers need. This is a workflow rationale, not a measured review-speed or quality claim.
+
 Start with people who already use agents for recurring reports, project briefs, QA handovers or knowledge pages. Invite them to try one ongoing document and report what was preserved, lost or duplicated. Five useful trial reports are a sensible first target; no adoption or growth results are claimed here.
 
 ## Ready-to-share media
@@ -20,9 +22,11 @@ Upload the PNG through the repository's **Settings → Social preview → Edit �
 
 Does every AI retry leave you with another `final-v3.md`?
 
+More drafts mean more work to review. When copies compete, you also have to find the current version and check that your feedback survived.
+
 I've open-sourced **Artifact Continuity**, an agent skill developed with AI assistance for people who repeatedly revise reports, project briefs, QA handovers and knowledge pages.
 
-It guides your agent to continue from the current file, preserve human edits, reconcile useful changes and retire checked redundant drafts. Required history stays.
+It guides your agent to continue from the current file, preserve human edits and approval boundaries, reconcile useful changes and retire checked redundant drafts. The goal is a manageable set of documents to review, with required history and evidence retained.
 
 The repository includes Codex setup, a runnable example and documented synthetic checks. The attached 40-second walkthrough presents recorded results from a synthetic run.
 
@@ -34,9 +38,9 @@ Feedback and small, sanitized examples are welcome.
 
 ## Short post for X
 
-Does every AI retry leave another final-v3.md?
+Faster AI output needs disciplined review.
 
-I built Artifact Continuity: an agent skill for preserving human edits and reconciling redundant drafts. Codex setup + runnable example included.
+Artifact Continuity helps agents preserve human edits, reconcile redundant drafts and keep the current work clear. Fewer unnecessary documents to compare; required history stays.
 
 Try one ongoing document:
 https://github.com/DDreamer94/artifact-continuity
@@ -46,6 +50,8 @@ https://github.com/DDreamer94/artifact-continuity
 **AI 每改一次，项目里就多一个「最终版」？**
 
 报告改了几轮，文件夹里留下 `final.md`、`final-v2.md`、`final-final.md`。下次继续时，哪个才是当前版本？你手动补充的意见还在吗？
+
+**生成越快，越需要认真审阅。** 每多一份草稿，就多一份需要核对的内容；版本互相竞争，还要花时间找当前文档、比较差异、追踪反馈。把文档控制在真正需要的范围内，有助于让审阅更聚焦。必要的历史基线、独立用途的文档和不同次执行的证据仍应保留。
 
 我把自己在 AI 协作中整理的方法做成了开源技能 **Artifact Continuity**，开发过程有 AI 协助。
 
