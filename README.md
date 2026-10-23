@@ -8,7 +8,7 @@ For people and teams who iterate on AI-assisted work through **retries, regenera
 
 Your next attempt should build on the current file and the right input versions. A new session or retry should not automatically produce another `final-v3` document or dated folder. You invoke the skill through an agent with access to your project files; the agent performs the work using its available tools.
 
-[See the example](#what-a-manageable-tree-looks-like) · [Install and use](#install-and-use) · [Validation](docs/validation.md) · [Feedback and contributions](#maintain-and-reuse)
+[See the example](#what-a-manageable-tree-looks-like) · [Install and use](#install-and-use) · [40-second demo and sharing kit](docs/sharing.md) · [Validation](docs/validation.md) · [Feedback and contributions](#maintain-and-reuse)
 
 Created and maintained by [DDreamer94](https://github.com/DDreamer94), with AI-assisted development. Its knowledge-maintenance guidance is informed by concepts from [Tencent WeKnora](https://github.com/Tencent/WeKnora). [Credits and provenance →](docs/provenance.md)
 
@@ -41,6 +41,15 @@ Before removing the two draft copies, the agent merges their useful notes into `
 Details about which inputs and generator produced the export belong in existing metadata or configuration. Keeping track of revisions should not create another status document or archive folder for every attempt.
 
 This is the [Atlas evaluation fixture](evals/tree-lifecycle.json): its complete project went from 16 files to 14 in both the original and final skill runs, with no writes on repeat. The final run also recorded generation revisions in existing configuration. The point is a clear current home and justified retained history; a lower file count alone does not prove a healthy tree. See the [validation record](docs/validation.md).
+
+<details>
+<summary>Watch the 40-second example: preserved edits, fewer redundant drafts</summary>
+
+![A synthetic Atlas run preserves human notes and the required baseline, reconciles two redundant drafts, then makes no writes on repeat.](assets/sharing/demo.gif)
+
+A condensed presentation of a fresh synthetic run, not real-time footage. [Download the MP4](assets/sharing/demo.mp4) · [Transcript, evidence and sharing copy](docs/sharing.md#demonstration-and-evidence)
+
+</details>
 
 ## Does this fit your workflow?
 
@@ -124,6 +133,15 @@ If that destination already exists, identify its owner and update mechanism firs
 
 Codex documents user skill discovery at `~/.agents/skills/`. In the CLI or IDE extension, use `/skills` or type `$` to select a skill; if a new installation does not appear, restart Codex. See the [official skill setup guidance](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills). The exercises here used Codex; other hosts' installation and invocation behavior have not been verified for this package. For another host, use its documented installer with this repository's root [SKILL.md](SKILL.md) and references.
 
+Alternatively, a **fresh project installation** through the Vercel skills CLI was verified with `skills` 1.7.4 and Node.js 22.20 or later. Run from your project:
+
+```sh
+DISABLE_TELEMETRY=1 npx --yes --ignore-scripts skills@1.7.4 add \
+  DDreamer94/artifact-continuity --skill artifact-continuity --agent codex --yes
+```
+
+This installs into the project's `.agents/skills/artifact-continuity` and creates `skills-lock.json`. The check matched every installed file to the public source, including both references and the license. It verified installation, not automatic activation; continue with the check below. If the skill is already installed, identify its owner first: `skills add` replaces its destination. Preserve local customizations and use your existing manager for managed installations. Telemetry is disabled in this command. See the [CLI documentation](https://github.com/vercel-labs/skills/blob/a80e4c9d12d607631249d4d7d059f835d4b2f13a/docs/commands.md).
+
 ### 2. Confirm activation
 
 Open your intended project in the agent. In Codex, send this read-only check:
@@ -200,7 +218,8 @@ references/knowledge-maintenance.md   Layers, freshness and reconciliation
 agents/openai.yaml                    Optional Codex UI metadata
 examples/                            Worked scenario
 evals/                               Synthetic fixture and inspection criteria
-docs/                                Provenance, validation and pairing proposal
+docs/                                Provenance, validation, pairing and sharing guide
+assets/sharing/                      Editable share card and captioned demo exports
 ```
 
 The [validation notes](docs/validation.md) distinguish the initial amendment exercise from the tree-management and failed-regeneration review. These are small synthetic filesystem scenarios, with actual artifacts and repeat-write checks. They do not establish performance, automatic discovery or reliability across every agent host.
